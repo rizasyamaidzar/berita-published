@@ -18,7 +18,7 @@ class BeritaFactory extends Factory
     {
 
         //
-        $names = ['-Kj9QY.png', '-Kj9QY.png', '-Kj9QY.png', '-Kj9QY.png', '-Kj9QY.png'];
+        $names = ['berita1.jpeg', 'berita2.jpeg', 'berita3.jpeg', 'berita4.jpeg', 'berita5.jpeg', 'berita6.jpeg', 'berita5.jpg', 'berita7.png', 'berita9.png'];
         $status = ['Published', 'Draft'];
         return [
             'judul' => fake()->name(),
@@ -27,7 +27,6 @@ class BeritaFactory extends Factory
             'artikel' => fake()->paragraph(20, true),
             'category_id' => $this->faker->numberBetween(1, 5),
             'status' => $this->faker->randomElement($status),
-            //
         ];
     }
 }

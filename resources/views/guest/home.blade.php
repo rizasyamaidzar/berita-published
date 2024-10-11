@@ -37,10 +37,10 @@
             <div class="grid grid-cols-1 gap-8 mx-auto gap-y-28 mt-24 sm:grid-cols-5 ">
 
                 @foreach ($hotnews as $news)
-                    <a href="#_">
+                    <a href="/news/{{ $news->judul }}">
                         <div class="relative rounded overflow-hidden hover:-translate-y-12 duration-500">
-                            <img class="w-full rounded-3xl shadow hover:shadow-3xl "
-                                src="https://i.pinimg.com/564x/eb/b3/bd/ebb3bd6c322463cee8b7b17659792830.jpg">
+                            <img class="w-full h-full rounded-3xl shadow hover:shadow-3xl "
+                                src="{{ asset('berita/cover-berita/' . $news->cover) }}">
                             <p
                                 class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
                                 {{ $news->judul }}

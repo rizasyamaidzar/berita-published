@@ -9,6 +9,11 @@ class DashboardController extends Controller
     //
     public function index()
     {
-        return view('cms.dashboard');
+        $countBerita = \App\Models\Berita::count();
+        $countCategory = \App\Models\Category::count();
+        return view('cms.dashboard', [
+            "countBerita" => $countBerita,
+            "countCategory" => $countCategory,
+        ]);
     }
 }

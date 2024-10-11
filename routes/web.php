@@ -43,3 +43,5 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'berita-management'], functi
 
 Route::get('/news', [GuestController::class, 'berita'])->name('news');
 Route::get('/news/{judul}', [GuestController::class, 'beritaView'])->name('news');
+
+Route::fallback([GuestController::class, 'error_page'])->name('error_page');
